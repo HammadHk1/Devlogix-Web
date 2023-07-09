@@ -24,9 +24,15 @@ function NavScrollExample() {
       const handleBeltsNowClick = () => {
         // Perform any additional logic or actions here if needed
         navigate("/Belts"); // Replace '/Menu' with the path to your desired page
-      };  
+      }; 
+      const handlehomeNowClick = () =>{
+        navigate("/")
+      } 
+      const handleAllNowClick = () =>{
+        navigate("/All")
+      }
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar  expand="lg" className="bg-body-tertiary">
       <Container fluid>
         <Navbar.Brand href="#">
           {" "}
@@ -39,19 +45,19 @@ function NavScrollExample() {
             style={{ maxHeight: "100px" }}
             navbarScroll
           >
-            <Nav.Link href="#action1">Home</Nav.Link>
-            <Nav.Link href="#action2">Link</Nav.Link>
-            <NavDropdown title="Link" id="navbarScrollingDropdown">
+            <Nav.Link onClick={handlehomeNowClick}>Home</Nav.Link>
+            <Nav.Link href="#action2">Cart</Nav.Link>
+            <NavDropdown title="Stock" id="navbarScrollingDropdown">
               <NavDropdown.Item onClick={handleJacketsNowClick}>Jackets</NavDropdown.Item>
               <NavDropdown.Item onClick={handleShoesNowClick}>Shoes</NavDropdown.Item>
               <NavDropdown.Item onClick={handleTshirtssNowClick}>Tshirts</NavDropdown.Item>
               <NavDropdown.Item onClick={handleBeltsNowClick}>Belts</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action5">
+              <NavDropdown.Item onClick={handleAllNowClick}>
                Show All
               </NavDropdown.Item>
             </NavDropdown>
-            
+
             <Nav.Link href="#" disabled>
               Link
             </Nav.Link>

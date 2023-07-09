@@ -3,6 +3,17 @@
 body {
     background-image: url("../Images/Menuback.jpg");
   }
+
+  
+  .hover .card {
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .hover .card:hover {
+    transform: scale(1.25);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
+  }
+
   h1{
     color: #484848;
     font-size: 50px;
@@ -29,4 +40,4 @@ body {
                  0 0 20px #fff, 
                  0 0 40px #fff;
   }
-  /*made with ❤, by qpi65*/
+  
