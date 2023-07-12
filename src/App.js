@@ -8,7 +8,8 @@ import Jackets from './Components/Jackets/Jackets';
 import Shoes from './Components/Shoes/Shoes';
 import Tshirt from './Components/Tshirt/Tshirt';
 import All from './Components/ShowAll/All';
-import Belts from './Components/Belts/Belts'
+import Belts from './Components/Belts/Belts';
+import './App.css'
 function App() {
   return (
     <Router>

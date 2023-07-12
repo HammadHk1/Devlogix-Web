@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Gochi+Hand');
 
 .body {
-  background-color: #ffb7b0;
+  /* background-color: #ffb7b0; */
   min-height: 70vh;
   padding: 40vh 30vw;
   color: hsl(198, 1%, 29%);

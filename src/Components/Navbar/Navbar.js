@@ -8,31 +8,31 @@ import logo from "../Images/l1.png";
 import { useNavigate } from "react-router-dom";
 
 function NavScrollExample() {
-    const navigate = useNavigate();
-    const handleJacketsNowClick = () => {
-        // Perform any additional logic or actions here if needed
-        navigate("/Jackets"); // Replace '/Menu' with the path to your desired page
-      };
-      const handleShoesNowClick = () => {
-        // Perform any additional logic or actions here if needed
-        navigate("/Shoes"); // Replace '/Menu' with the path to your desired page
-      };
-      const handleTshirtssNowClick = () => {
-        // Perform any additional logic or actions here if needed
-        navigate("/Tshirts"); // Replace '/Menu' with the path to your desired page
-      };
-      const handleBeltsNowClick = () => {
-        // Perform any additional logic or actions here if needed
-        navigate("/Belts"); // Replace '/Menu' with the path to your desired page
-      }; 
-      const handlehomeNowClick = () =>{
-        navigate("/")
-      } 
-      const handleAllNowClick = () =>{
-        navigate("/All")
-      }
+  const navigate = useNavigate();
+  const handleJacketsNowClick = () => {
+    // Perform any additional logic or actions here if needed
+    navigate("/Jackets"); // Replace '/Menu' with the path to your desired page
+  };
+  const handleShoesNowClick = () => {
+    // Perform any additional logic or actions here if needed
+    navigate("/Shoes"); // Replace '/Menu' with the path to your desired page
+  };
+  const handleTshirtssNowClick = () => {
+    // Perform any additional logic or actions here if needed
+    navigate("/Tshirts"); // Replace '/Menu' with the path to your desired page
+  };
+  const handleBeltsNowClick = () => {
+    // Perform any additional logic or actions here if needed
+    navigate("/Belts"); // Replace '/Menu' with the path to your desired page
+  };
+  const handlehomeNowClick = () => {
+    navigate("/");
+  };
+  const handleAllNowClick = () => {
+    navigate("/All");
+  };
   return (
-    <Navbar  expand="lg" className="bg-body-tertiary">
+    <Navbar expand="lg" className="bg-body-tertiary">
       <Container fluid>
         <Navbar.Brand href="#">
           {" "}
@@ -48,19 +48,23 @@ function NavScrollExample() {
             <Nav.Link onClick={handlehomeNowClick}>Home</Nav.Link>
             <Nav.Link href="#action2">Cart</Nav.Link>
             <NavDropdown title="Stock" id="navbarScrollingDropdown">
-              <NavDropdown.Item onClick={handleJacketsNowClick}>Jackets</NavDropdown.Item>
-              <NavDropdown.Item onClick={handleShoesNowClick}>Shoes</NavDropdown.Item>
-              <NavDropdown.Item onClick={handleTshirtssNowClick}>Tshirts</NavDropdown.Item>
-              <NavDropdown.Item onClick={handleBeltsNowClick}>Belts</NavDropdown.Item>
+              <NavDropdown.Item onClick={handleJacketsNowClick}>
+                Jackets
+              </NavDropdown.Item>
+              <NavDropdown.Item onClick={handleShoesNowClick}>
+                Shoes
+              </NavDropdown.Item>
+              <NavDropdown.Item onClick={handleTshirtssNowClick}>
+                Tshirts
+              </NavDropdown.Item>
+              <NavDropdown.Item onClick={handleBeltsNowClick}>
+                Belts
+              </NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item onClick={handleAllNowClick}>
-               Show All
+                Show All
               </NavDropdown.Item>
             </NavDropdown>
-
-            <Nav.Link href="#" disabled>
-              Link
-            </Nav.Link>
           </Nav>
           <Form className="d-flex">
             <Form.Control
