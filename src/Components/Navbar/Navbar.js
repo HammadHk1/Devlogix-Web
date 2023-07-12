@@ -1,3 +1,4 @@
+import React from "react";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
@@ -8,28 +9,53 @@ import logo from "../Images/l1.png";
 import { useNavigate } from "react-router-dom";
 
 function NavScrollExample() {
+  const [searchQuery, setSearchQuery] = React.useState("");
+  const [selectedCategory, setSelectedCategory] = React.useState("all");
   const navigate = useNavigate();
+  const productData = [
+    { id: 1, name: "Jacket", category: "/Jackets" },
+    { id: 2, name: "Shoes", category: "/Shoes" },
+    { id: 3, name: "Tshirt", category: "/Tshirts" },
+    { id: 4, name: "Belt", category: "/Belts" },
+  ];
   const handleJacketsNowClick = () => {
-    // Perform any additional logic or actions here if needed
-    navigate("/Jackets"); // Replace '/Menu' with the path to your desired page
+    
+    navigate("/Jackets"); 
   };
   const handleShoesNowClick = () => {
-    // Perform any additional logic or actions here if needed
-    navigate("/Shoes"); // Replace '/Menu' with the path to your desired page
+    
+    navigate("/Shoes"); 
   };
   const handleTshirtssNowClick = () => {
-    // Perform any additional logic or actions here if needed
-    navigate("/Tshirts"); // Replace '/Menu' with the path to your desired page
+    
+    navigate("/Tshirts"); 
   };
   const handleBeltsNowClick = () => {
-    // Perform any additional logic or actions here if needed
-    navigate("/Belts"); // Replace '/Menu' with the path to your desired page
+    navigate("/Belts"); 
   };
   const handlehomeNowClick = () => {
     navigate("/");
   };
   const handleAllNowClick = () => {
     navigate("/All");
+  };
+  const handleSearchQueryChange = (e) => {
+    setSearchQuery(e.target.value);
+    navigate(e.target.value)
+  };
+
+  const handleSearch = () => {
+    // Filter the products based on the search query and selected category
+    const filteredProducts = productData.filter((product) => {
+      const isCategoryMatch =
+        selectedCategory === "all" || product.category === selectedCategory;
+      const isNameMatch = product.name.toLowerCase().includes(searchQuery.toLowerCase());
+
+      return isCategoryMatch && isNameMatch;
+    });
+
+    // Perform additional logic or actions with the filtered products if needed
+    console.log(filteredProducts);
   };
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
@@ -72,7 +98,10 @@ function NavScrollExample() {
               placeholder="Search"
               className="me-2"
               aria-label="Search"
+              value={searchQuery}
+              onChange={handleSearchQueryChange}
             />
+
             <Button variant="outline-success">Search</Button>
           </Form>
         </Navbar.Collapse>
