@@ -1,0 +1,54 @@
+
+.container {
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust the height as needed */
+  }
+  
+  .logo {
+    animation: logoAnimation 5s ease-in-out infinite;
+    margin-right: 50px;
+  
+  }
+  
+  .login {
+    animation: loginAnimation 0s ease-in-out infinite;
+  }
+  
+  @keyframes logoAnimation {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes loginAnimation {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      height: auto;
+    }
+  
+    .logo, .login {
+      margin: 10px;
+    }
+  }
+  

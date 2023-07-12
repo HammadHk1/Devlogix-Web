@@ -1,0 +1,184 @@
+.profile-page__header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.profile-page__profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  animation: profileImageAnimation 1s ease-in-out forwards;
+}
+
+.profile-page__name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+  opacity: 0;
+  animation: nameAnimation 1s ease-in-out forwards;
+}
+
+.profile-page__nickname {
+  font-size: 18px;
+  color: gray;
+  opacity: 0;
+  animation: nicknameAnimation 1s ease-in-out forwards;
+}
+
+@keyframes profileImageAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes nameAnimation {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes nicknameAnimation {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.profile-page__cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  flex: 1 1 250px; /* Adjust the width as needed */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  margin: 10px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card.expanded {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.card.expanded .card-content {
+  color: #fff;
+}
+
+.card-image {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.card-content {
+  color: #333;
+  text-align: center;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-paragraph {
+  margin-bottom: 10px;
+}
+
+.card-expand {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .profile-page__cards {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .card {
+    width: 100%;
+  }
+}
+.addcard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+}
+
+.addcard:hover {
+  transform: scale(1.05);
+}
+
+.addcard img {
+  /* width: 100px;
+  height: 100px;*/
+  object-fit: cover; 
+  border-radius: 50%;
+  animation: rotateAnimation 2s infinite linear;
+}
+
+@keyframes rotateAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
