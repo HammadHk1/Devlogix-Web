@@ -30,7 +30,7 @@ const Log = () => {
   return (
     <div className="container">
       <div className="logo">
-        <img style={{ height: "200px", width: "200px" }} src={logo} />
+        <img style={{ height: "200px", width: "200px" }} src={logo} alt="logo" />
       </div>
       <div className="login">
         <Card>

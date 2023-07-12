@@ -5,21 +5,6 @@ import React from "react";
 // import ForumPage from "./InputData/Input";
 import ProfilePage from "./Profile/Profile";
 export default function Dashboard() {
-  // const [error, setError] = useState("");
-  // const { currentUser, logout } = useAuth();
-  // const history = useHistory();
-
-  // async function handleLogout() {
-  //   setError("");
-
-  //   try {
-  //     await logout();
-  //     history.push("/login");
-  //   } catch {
-  //     setError("Failed to log out");
-  //   }
-  // }
-
   return (
     <>
       <ProfilePage/>

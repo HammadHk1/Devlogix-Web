@@ -42,7 +42,7 @@ const Sign = () => {
         
   return (
     <div className="container">
-      <div className="logo"><img style={{ height: "200px", width: "200px" }} src={logo}/></div>
+      <div className="logo"><img style={{ height: "200px", width: "200px" }} src={logo} alt="logo"/></div>
       <div className="login"> <Card>
         <Card.Body>
           <h2 className="text-center mb-4">Sign Up</h2>

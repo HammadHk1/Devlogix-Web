@@ -18,7 +18,7 @@ const ForumPage = () => {
   
     const addDocument = async () => {
     
-      const db = firebase.firestore();
+      // const db = firebase.firestore();
       const currentUser = firebase.auth().currentUser;
     
       // Create a new document for the user using their user ID
@@ -41,9 +41,6 @@ const ForumPage = () => {
     
       
   }; 
-  
-
-
   return (
     <div className="forum-page">
       <div className="forum-page__content">
@@ -70,10 +67,3 @@ const ForumPage = () => {
 };
 
 export default ForumPage;
-
-function MakeProfile(){
-  
-
-
-
-}
